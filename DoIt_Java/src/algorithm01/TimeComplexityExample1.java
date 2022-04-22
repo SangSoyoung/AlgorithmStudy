@@ -1,6 +1,6 @@
 package algorithm01;
 
-public class timeComplexityExample1 {
+public class TimeComplexityExample1 {
 
 	public static void main(String[] args) {
 		
