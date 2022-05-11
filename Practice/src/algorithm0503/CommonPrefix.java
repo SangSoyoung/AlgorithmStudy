@@ -5,20 +5,31 @@ public class CommonPrefix {
 	public static void main(String[] args) {
 		
 		String arr[] = {"abcedf", "abcefg", "abczxy"};
-		char[] prefix = new char[arr[0].length()];
-		
-		System.out.println(arr[0].length());
+		StringBuilder result = new StringBuilder();
+		boolean same = true;
 		
 		for(int i = 0; i < arr[0].length(); i++) {
 			char temp = arr[0].charAt(i);
+			
 			for(int j = 1; j < arr.length; j++) {
-				if(temp == arr[j].charAt(i)) {
-					prefix[j] = temp;
+				if(arr[j].length() <= i) {
+					same = false;
+					break;
 				}
+				else if(temp == arr[j].charAt(i)) {
+					continue;
+				}
+				same = false;
+				break;
+			}
+			if(same) {
+				result.append(temp);
+			} else {
+				break;
 			}
 		}
 		
-		
+		System.out.println(result.toString());
 		
 		// 문자열 배열 요소의 문자 비교해서 "접두어 배열(prefix)에 담기"
 //		for(int i = -1; i<arr.length-2; i++) {
@@ -33,10 +44,7 @@ public class CommonPrefix {
 //			}
 //		}
 //		
-		for(int k = 0; k < prefix.length; k++) {
-			System.out.print(prefix[k]);
-		}
-		
+
 	}
 
 }
