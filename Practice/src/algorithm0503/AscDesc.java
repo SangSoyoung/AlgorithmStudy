@@ -15,7 +15,7 @@ public class AscDesc {
 		
 		// 오름차순 정렬(2361 -> 1236)
 		// 임시 저장소
-		int temp = 0;
+		char temp = 0;
 
 		for(int i = 0; i < chAsc.length; i++) {
 			
@@ -25,14 +25,14 @@ public class AscDesc {
 				if(chAsc[j] > chAsc[j+1]) {
 					temp = chAsc[j];
 					chAsc[j] = chAsc[j+1];
-					chAsc[j+1] = (char)temp;
+					chAsc[j+1] = temp;
 				}
 				
 				// 내림차순 정렬
 				if(chDesc[j] < chDesc[j+1]) {
 					temp = chDesc[j];
 					chDesc[j] = chDesc[j+1];
-					chDesc[j+1] = (char)temp;
+					chDesc[j+1] = temp;
 				}	
 			}
 		}
