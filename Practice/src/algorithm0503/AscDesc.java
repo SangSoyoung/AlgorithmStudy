@@ -15,7 +15,7 @@ public class AscDesc {
 		
 		// 오름차순 정렬(2361 -> 1236)
 		// 임시 저장소
-		char temp = '0';
+		char temp = ' ';
 
 		for(int i = 0; i < chAsc.length; i++) {
 			
